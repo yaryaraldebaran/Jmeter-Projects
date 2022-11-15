@@ -8,6 +8,26 @@
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
+          <elementProp name="url" elementType="Argument">
+            <stringProp name="Argument.name">url</stringProp>
+            <stringProp name="Argument.value">${__P(url)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="path" elementType="Argument">
+            <stringProp name="Argument.name">path</stringProp>
+            <stringProp name="Argument.value">${__P(path)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="username" elementType="Argument">
+            <stringProp name="Argument.name">username</stringProp>
+            <stringProp name="Argument.value">${__P(username)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="password" elementType="Argument">
+            <stringProp name="Argument.name">password</stringProp>
+            <stringProp name="Argument.value">${__P(password)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
           <elementProp name="threadNumber" elementType="Argument">
             <stringProp name="Argument.name">threadNumber</stringProp>
             <stringProp name="Argument.value">${__P(threadNumber)}</stringProp>
@@ -50,16 +70,6 @@
     <hashTree>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
         <collectionProp name="Arguments.arguments">
-          <elementProp name="url" elementType="Argument">
-            <stringProp name="Argument.name">url</stringProp>
-            <stringProp name="Argument.value">reqres.in</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
-          <elementProp name="path" elementType="Argument">
-            <stringProp name="Argument.name">path</stringProp>
-            <stringProp name="Argument.value">api/users</stringProp>
-            <stringProp name="Argument.metadata">=</stringProp>
-          </elementProp>
           <elementProp name="username" elementType="Argument">
             <stringProp name="Argument.name">username</stringProp>
             <stringProp name="Argument.value"></stringProp>
@@ -122,7 +132,7 @@
         </HeaderManager>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">&quot;${fragmentTest}&quot; == &quot;basicSetupPost&quot;</stringProp>
+          <stringProp name="IfController.condition">&quot;${fragmentTest}&quot; == &quot;Post&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
         <hashTree>
@@ -289,7 +299,7 @@ fWriter.close();</stringProp>
         </CounterConfig>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
-          <stringProp name="IfController.condition">&quot;${fragmentTest}&quot; == &quot;basicSetup&quot;</stringProp>
+          <stringProp name="IfController.condition">&quot;${fragmentTest}&quot; == &quot;Get&quot;</stringProp>
           <boolProp name="IfController.evaluateAll">false</boolProp>
         </IfController>
         <hashTree>
